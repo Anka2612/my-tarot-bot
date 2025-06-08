@@ -1,0 +1,8 @@
+services:
+  - type: worker
+    name: tarot-bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python tarot_bot.py"
+    autoDeploy: true
