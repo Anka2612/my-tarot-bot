@@ -83,7 +83,8 @@ async def handle_button(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 def main():
-    app = ApplicationBuilder().token("7539692039:AAHnZ1PFfShYwc0CsRK3wYSWn8zSL5qlMec").build()
+    import os
+app = ApplicationBuilder().token(os.getenv("BOT_TOKEN")).build()
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("love", love))
